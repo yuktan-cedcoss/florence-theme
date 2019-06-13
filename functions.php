@@ -192,6 +192,7 @@ function tag_widget_limit($args){
  
  return $args;
 }
+
 add_filter( 'widget_tag_cloud_args', 'change_tag_cloud_font_sizes');
 /**
  * Change the Tag Cloud's Font Sizes.
