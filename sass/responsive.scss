@@ -1,0 +1,89 @@
+/*==================================
+=            NAVIGATION            =
+==================================*/
+@media screen and (min-width: 37.5em) {
+	
+	.main-navigation {
+		ul {
+		display: block;
+		}
+	}
+}
+
+@media screen and (max-width: 856px) {
+	
+	.main-navigation {
+		padding: 0 63px !important;
+	}
+}
+
+@media screen and (max-width:  782px) {
+.admin-bar {
+	.main-navigation {
+    	margin-top: 46px;
+	}
+}
+}
+
+@media screen and (max-width:  768px) {
+  .main-navigation{
+		padding:15px 15px !important;
+		li {
+		float: none;
+		text-align: left;
+		}
+		a{
+			padding-bottom: 4px;
+			padding-top: 4px;
+		}
+	}
+}
+
+@media screen and (max-width:  600px) {
+
+#primary-menu{
+	li{
+		margin-right: 0;
+		ul{
+			width:100%;
+		}
+		a{
+			width: 100%;
+		}
+	}
+}
+}
+
+
+
+/*=====  End of NAVIGATION  ======*/
+
+
+/*=======================================
+=            CONTENT-SIDEBAR            =
+=======================================*/
+
+@media screen and (max-width: 600px) {
+ #secondary {
+  	padding-right: 15px;
+  	padding-left: 15px;
+  }
+}
+
+/*=====  End of CONTENT-SIDEBAR  ======*/
+
+
+/*================================
+=            404 PAGE            =
+================================*/
+
+
+@media screen and (max-width:  600px) {
+.error-404 {
+	h1 {
+	    font-size: 170px !important;
+	}
+}
+}
+
+/*=====  End of 404 PAGE  ======*/
