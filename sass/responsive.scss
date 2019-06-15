@@ -1,58 +1,44 @@
 /*==================================
 =            NAVIGATION            =
 ==================================*/
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 768px ) {
 	
-	.main-navigation {
+	#site-navigation{
 		ul {
 		display: block;
 		}
 	}
 }
-
-@media screen and (max-width: 856px) {
-	
-	.main-navigation {
-		padding: 0 63px !important;
-	}
-}
-
 @media screen and (max-width:  782px) {
 .admin-bar {
-	.main-navigation {
+	#site-navigation {
     	margin-top: 46px;
 	}
 }
 }
 
-@media screen and (max-width:  768px) {
-  .main-navigation{
+@media screen and (max-width:  767px) {
+  #site-navigation{
 		padding:15px 15px !important;
 		li {
 		float: none;
 		text-align: left;
-		}
+		margin-right: 0 !important;
 		a{
 			padding-bottom: 4px;
 			padding-top: 4px;
 		}
-	}
-}
-
-@media screen and (max-width:  600px) {
-
-#primary-menu{
-	li{
-		margin-right: 0;
-		ul{
-			width:100%;
 		}
-		a{
-			width: 100%;
+		.dropdown-menu{
+				width:100%;
+				a{
+					min-width: 100% !important;
+				}
 		}
 	}
 }
-}
+
+
 
 
 

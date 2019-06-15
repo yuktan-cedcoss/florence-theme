@@ -508,56 +508,54 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.admin-bar .main-navigation {
+.admin-bar #site-navigation {
   margin-top: 32px;
 }
 
-.main-navigation .current-menu-item a {
+#site-navigation .current-menu-item a {
   color: #EF9D87 !important;
 }
 
-.main-navigation {
+#site-navigation {
   clear: both;
   display: block;
   float: left;
   width: 100%;
-  padding: 0 120px !important;
+  padding: 0 !important;
   font-size: 13px;
 }
-.main-navigation ul {
-  display: none;
+#site-navigation ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
-.main-navigation ul ul {
+#site-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
-  position: absolute;
   top: 100%;
   left: -999em;
   z-index: 99999;
 }
-.main-navigation ul ul ul {
+#site-navigation ul ul ul {
   left: -999em;
   top: 0;
 }
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+#site-navigation ul ul li:hover > ul, #site-navigation ul ul li.focus > ul {
   left: 100%;
 }
-.main-navigation ul ul a {
+#site-navigation ul ul a {
   width: 200px;
 }
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
+#site-navigation ul li:hover > ul,
+#site-navigation ul li.focus > ul {
   left: auto;
 }
-.main-navigation li {
+#site-navigation li {
   float: left;
   position: relative;
-  margin-right: 26px;
+  margin-right: 10px;
 }
-.main-navigation a {
+#site-navigation a {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
@@ -565,18 +563,20 @@ a:hover, a:active {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-.main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
+#site-navigation a:hover, #site-navigation a:focus, #site-navigation a:active {
   color: #EF9D87 !important;
   text-decoration: none !important;
 }
-.main-navigation .sub-menu {
+#site-navigation .dropdown-menu {
   background: #ffffff;
   box-shadow: 0 5px 4px -4px rgba(190, 190, 190, 0.1);
+  border: none !important;
+  padding: 0 !important;
 }
-.main-navigation .sub-menu li {
+#site-navigation .dropdown-menu li {
   margin-right: 0 !important;
 }
-.main-navigation .sub-menu li a {
+#site-navigation .dropdown-menu li a {
   color: #777777 !important;
   border-top: 1px solid #f4f4f4;
   margin: 0;
@@ -587,17 +587,13 @@ a:hover, a:active {
   -moz-transition: .25s;
   -webkit-transition: .25s;
   transition: .25s;
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
 }
-.main-navigation .sub-menu li a:hover, .main-navigation .sub-menu li a:focus, .main-navigation .sub-menu li a:active {
+#site-navigation .dropdown-menu li a:hover, #site-navigation .dropdown-menu li a:focus, #site-navigation .dropdown-menu li a:active {
   background-color: #EF9D87 !important;
   text-decoration: none !important;
   color: #ffffff !important;
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
 }
 
 .comment-navigation, .post-navigation {
@@ -1365,43 +1361,34 @@ object {
 /*==================================
 =            NAVIGATION            =
 ==================================*/
-@media screen and (min-width: 37.5em) {
-  .main-navigation ul {
+@media screen and (min-width: 768px) {
+  #site-navigation ul {
     display: block;
   }
 }
-@media screen and (max-width: 856px) {
-  .main-navigation {
-    padding: 0 63px !important;
-  }
-}
 @media screen and (max-width: 782px) {
-  .admin-bar .main-navigation {
+  .admin-bar #site-navigation {
     margin-top: 46px;
   }
 }
-@media screen and (max-width: 768px) {
-  .main-navigation {
+@media screen and (max-width: 767px) {
+  #site-navigation {
     padding: 15px 15px !important;
   }
-  .main-navigation li {
+  #site-navigation li {
     float: none;
     text-align: left;
+    margin-right: 0 !important;
   }
-  .main-navigation a {
+  #site-navigation li a {
     padding-bottom: 4px;
     padding-top: 4px;
   }
-}
-@media screen and (max-width: 600px) {
-  #primary-menu li {
-    margin-right: 0;
-  }
-  #primary-menu li ul {
+  #site-navigation .dropdown-menu {
     width: 100%;
   }
-  #primary-menu li a {
-    width: 100%;
+  #site-navigation .dropdown-menu a {
+    min-width: 100% !important;
   }
 }
 /*=====  End of NAVIGATION  ======*/

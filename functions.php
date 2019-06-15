@@ -42,11 +42,13 @@ if ( ! function_exists( 'florence_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		// // This theme uses wp_nav_menu() in one location.
+		// register_nav_menus( array(
+		// 	'menu-1' => esc_html__( 'Primary', 'florence' ),
+		// ) );
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'florence' ),
+			'primary' => __( 'Primary Menu', 'florence' ),
 		) );
-
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -160,6 +162,7 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
 /**
  * Excerpt code
  */
@@ -179,6 +182,7 @@ function wpdocs_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
+
  //Register tag cloud filter callback
 add_filter('widget_tag_cloud_args', 'tag_widget_limit');
  
@@ -192,6 +196,7 @@ function tag_widget_limit($args){
  
  return $args;
 }
+
 
 add_filter( 'widget_tag_cloud_args', 'change_tag_cloud_font_sizes');
 /**
@@ -208,4 +213,12 @@ function change_tag_cloud_font_sizes( array $args ) {
     $args['largest'] = '7.5';
 
     return $args;
+}
+
+if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
+	// file does not exist... return an error.
+	return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
+} else {
+	// file exists... require it.
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }

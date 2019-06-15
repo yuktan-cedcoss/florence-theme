@@ -1,9 +1,9 @@
-.admin-bar{
-	.main-navigation{
-		margin-top: 32px;
+.admin-bar {
+	#site-navigation {
+    	margin-top: 32px;
 	}
 }
-.main-navigation{
+#site-navigation{
 	.current-menu-item{
 		a{
 			color: $color__link-hover !important;
@@ -11,15 +11,15 @@
 	}
 }
 
-.main-navigation {
+#site-navigation {
 	clear: both;
 	display: block;
 	float: left;
 	width: 100%;
-	padding: 0 120px !important;
+	padding: 0 !important;
 	font-size:13px;
 	ul {
-		display: none;
+		// display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -27,7 +27,6 @@
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
-			position: absolute;
 			top: 100%;
 			left: -999em;
 			z-index: 99999;
@@ -67,7 +66,7 @@
 	li {
 		float: left;
 		position: relative;
-		margin-right: 26px;
+		margin-right: 10px;
 
 		&:hover > a,
 		&.focus > a {
@@ -95,9 +94,11 @@
 	.current-menu-ancestor > a {
 	}
 
-	.sub-menu{
+	.dropdown-menu{
 		background: #ffffff;
 		box-shadow: 0 5px 4px -4px rgba(190,190,190,.1);
+		border:none !important;
+		padding:0 !important;
 		li{
 			margin-right: 0 !important; 
 			a{
@@ -111,6 +112,8 @@
 			    -moz-transition: .25s;
 			    -webkit-transition: .25s;
 			    transition: .25s;
+			    font-family: $font__main;
+			    font-size: 11px;
 				&:hover,
 				&:focus,
 				&:active {
@@ -123,11 +126,11 @@
 	}
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
+// /* Small menu. */
+// .menu-toggle,
+// #site-navigation.toggled ul {
+// 	display: block;
+// }
 
 
 

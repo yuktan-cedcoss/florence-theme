@@ -4,6 +4,17 @@
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
+jQuery(function($) {
+  // Bootstrap menu magic
+  $(window).resize(function() {
+    if ($(window).width() < 768) {
+      $(".dropdown-toggle").attr('data-toggle', 'dropdown');
+    } else {
+      $(".dropdown-toggle").removeAttr('data-toggle dropdown');
+    }
+  });
+});
+
 ( function() {
 	var container, button, menu, links, i, len;
 
