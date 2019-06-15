@@ -222,3 +222,11 @@ if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.ph
 	// file exists... require it.
 	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
+
+
+if ( !class_exists( 'ReduxFramework' )) {
+    require_once( dirname( __FILE__ ) . '/redux-framework/ReduxCore/framework.php' );
+}
+if ( !isset( $redux_demo )) {
+    require_once( dirname( __FILE__ ) . '/redux-framework/sample/sample-config.php' );
+}
