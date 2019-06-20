@@ -23,7 +23,7 @@
 	    font-weight: normal;
 	    position: relative;
 	    span {
-		    background-color: #F5F5F5;
+		    background-color: $color__background-body;
 		    padding: 0 10px;
 		}
 	    &:after {

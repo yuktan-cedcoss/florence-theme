@@ -342,7 +342,7 @@ html {
 }
 
 body {
-  background: #f5f5f5 !important;
+  background: #f5f5f5;
   /* Fallback for when there is no custom background color defined. */
 }
 
@@ -427,15 +427,6 @@ input[type="reset"]:hover,
 input[type="submit"]:hover {
   border-color: #333;
 }
-button:active, button:focus,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="reset"]:active,
-input[type="reset"]:focus,
-input[type="submit"]:active,
-input[type="submit"]:focus {
-  border-color: #aaa #bbb #bbb;
-}
 
 input[type="text"],
 input[type="email"],
@@ -492,7 +483,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #777777 !important;
+  color: #777777;
 }
 a:hover, a:focus, a:active {
   color: #EF9D87;
@@ -513,7 +504,7 @@ a:hover, a:active {
 }
 
 #site-navigation .current-menu-item a {
-  color: #EF9D87 !important;
+  color: #EF9D87;
 }
 
 #site-navigation {
@@ -559,12 +550,12 @@ a:hover, a:active {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  color: #777777 !important;
+  color: #777777;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 #site-navigation a:hover, #site-navigation a:focus, #site-navigation a:active {
-  color: #EF9D87 !important;
+  color: #EF9D87;
   text-decoration: none !important;
 }
 #site-navigation .dropdown-menu {
@@ -591,7 +582,7 @@ a:hover, a:active {
   font-size: 11px;
 }
 #site-navigation .dropdown-menu li a:hover, #site-navigation .dropdown-menu li a:focus, #site-navigation .dropdown-menu li a:active {
-  background-color: #EF9D87 !important;
+  background-color: #EF9D87;
   text-decoration: none !important;
   color: #ffffff !important;
 }
@@ -622,9 +613,10 @@ a:hover, a:active {
   -ms-transition: .3s;
   -moz-transition: .3s;
   -webkit-transition: .3s;
+  color: #EF9D87;
 }
 .comment-navigation .nav-next a:hover, .post-navigation .nav-next a:hover {
-  background-color: #EF9D87 !important;
+  background-color: #EF9D87;
   color: #ffffff !important;
 }
 .comment-navigation .nav-previous, .post-navigation .nav-previous {
@@ -642,9 +634,10 @@ a:hover, a:active {
   -ms-transition: .3s;
   -moz-transition: .3s;
   -webkit-transition: .3s;
+  color: #EF9D87;
 }
 .comment-navigation .nav-previous a:hover, .post-navigation .nav-previous a:hover {
-  background-color: #EF9D87 !important;
+  background-color: #EF9D87;
   color: #ffffff !important;
 }
 
@@ -667,9 +660,10 @@ a:hover, a:active {
   -ms-transition: .3s;
   -moz-transition: .3s;
   -webkit-transition: .3s;
+  color: #EF9D87;
 }
 .posts-navigation .nav-previous a:hover {
-  background-color: #EF9D87 !important;
+  background-color: #EF9D87;
   color: #ffffff !important;
 }
 .posts-navigation .nav-next a {
@@ -684,9 +678,10 @@ a:hover, a:active {
   -ms-transition: .3s;
   -moz-transition: .3s;
   -webkit-transition: .3s;
+  color: #EF9D87;
 }
 .posts-navigation .nav-next a:hover {
-  background-color: #EF9D87 !important;
+  background-color: #EF9D87;
   color: #ffffff !important;
 }
 
@@ -809,7 +804,7 @@ a:hover, a:active {
   position: relative;
 }
 .widget .widget-title span {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   padding: 0 10px;
 }
 .widget .widget-title:after {
@@ -944,7 +939,7 @@ a:hover, a:active {
   font-weight: 700;
   font-size: 11px;
   letter-spacing: 1px;
-  color: #EF9D87 !important;
+  color: #EF9D87;
 }
 .post .entry-header .cat-links a:hover, .post .entry-header .cat-links a:focus, .post .entry-header .cat-links a:active {
   color: #EF9D87;
@@ -954,7 +949,7 @@ a:hover, a:active {
   font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #000000 !important;
+  color: #000000;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   -o-transition: .3s;
@@ -980,7 +975,7 @@ a:hover, a:active {
 }
 .post .entry-content .read-more {
   text-align: center;
-  color: #EF9D87 !important;
+  color: #EF9D87;
   font-family: "Open Sans", sans-serif;
   line-height: 24px;
   text-transform: uppercase;
@@ -996,8 +991,8 @@ a:hover, a:active {
 }
 .post .entry-content .read-more:hover {
   border-color: #EF9D87;
-  background-color: #EF9D87 !important;
-  color: #ffffff !important;
+  background-color: #EF9D87;
+  color: #ffffff;
 }
 .post .entry-meta {
   padding: 0 30px 30px;
@@ -1008,8 +1003,11 @@ a:hover, a:active {
   font-family: "Crimson Text", serif;
   font-size: 15px;
 }
+.post .entry-meta .posted-on a {
+  color: #777777;
+}
 .post .entry-meta .author a {
-  color: #EF9D87 !important;
+  color: #EF9D87;
 }
 
 /*======================================
@@ -1022,6 +1020,9 @@ a:hover, a:active {
   background: #fff;
   overflow: hidden;
   margin-top: 50px;
+}
+.site-footer a {
+  color: #EF9D87;
 }
 
 /*=====  End of FOOTER SECTION  ======*/

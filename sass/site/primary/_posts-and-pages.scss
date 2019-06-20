@@ -36,7 +36,7 @@
 			    font-weight: 700;
 			    font-size: 11px;
 			    letter-spacing: 1px;
-			    color: $color__link-hover !important;
+			    color: $color__link-hover;
 			    &:hover,
 				&:focus,
 				&:active {
@@ -50,7 +50,7 @@
 	    		font-size: 24px;
 			    text-transform: uppercase;
 			    letter-spacing: 2px;
-			    color: #000000 !important;
+			    color: #000000;
 			    font-family: $font__code;
 			    font-weight: 400;
 			    -o-transition: .3s;
@@ -78,7 +78,7 @@
 	    }
 	    .read-more{
 	    	text-align: center;
-	    	color: $color__link-hover !important;
+	    	color: $color__link-hover;
 	    	font-family: $font__main;
 		    line-height: 24px;
 		    text-transform: uppercase;
@@ -93,8 +93,8 @@
 			display: inline-block;
     		&:hover{
     			border-color: $color__link-hover;
-    			background-color: $color__link-hover !important;
-    			color:#ffffff !important;
+    			background-color: $color__link-hover;
+    			color:#ffffff;
     		}
 	    }
 	}
@@ -106,9 +106,14 @@
 	    margin-right: 8px;
 	    font-family: $font__pre;
 	    font-size: 15px;
+	    .posted-on{
+	    	a{
+	    		color:$color__link;
+	    	}
+	    }
 	    .author{
 	    	a{
-	    		color: $color__link-hover !important;
+	    		color: $color__link-hover;
 	    	}
 	    }
 	}
@@ -125,6 +130,9 @@
     background: #fff;
     overflow: hidden;
     margin-top: 50px;
+    a{
+    	color: $color__link-hover;
+    }
 }
 
 /*=====  End of FOOTER SECTION  ======*/
