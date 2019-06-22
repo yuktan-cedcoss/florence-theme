@@ -9,8 +9,23 @@
 
 get_header();
 ?>
-
-	<section id="primary" class="content-area col-sm-12 col-md-8">
+<?php
+	global $redux_demo; 
+	$florence_layout_left_sidebar = $redux_demo['opt-select'];
+	if( ! wp_is_mobile() && $florence_layout_left_sidebar == '1'){
+		get_sidebar();
+	}
+?>
+	<section id="primary" class="content-area <?php 
+		global $redux_demo; 
+		$florence_layout_select_options = $redux_demo['opt-select'];
+		if($florence_layout_select_options == '1' || $florence_layout_select_options == '2'){
+			echo "col-sm-12 col-md-8";
+		}
+		else{
+			echo "col-sm-12 col-md-12";
+		}
+	?>">
 		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
@@ -49,7 +64,15 @@ get_header();
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
-
 <?php
-get_sidebar();
+	global $redux_demo; 
+	$florence_layout_right_sidebar = $redux_demo['opt-select'];
+	if( wp_is_mobile() && $florence_layout_right_sidebar == '1' || $florence_layout_right_sidebar == '2'){
+		get_sidebar();
+	}
+	elseif(! wp_is_mobile() && $florence_layout_right_sidebar == '2'){
+		get_sidebar();
+	}
+?>
+<?php
 get_footer();

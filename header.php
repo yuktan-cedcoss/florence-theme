@@ -69,5 +69,14 @@
 
 	
 	<div id="content" class="site-content">
-	<div class="container">
+	<div class="<?php
+		global $redux_demo;
+		$florence_layout_style = $redux_demo['opt-radio'];
+		if($florence_layout_style == '1'){
+			echo "container-fluid";
+		}
+		else{
+			echo "container";
+		}
+	?>">
 	<div class="row">
