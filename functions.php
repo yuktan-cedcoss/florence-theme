@@ -163,24 +163,47 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+if ( !class_exists( 'ReduxFramework' )) {
+    require_once( dirname( __FILE__ ) . '/redux-framework/ReduxCore/framework.php' );
+}
+if ( !isset( $redux_demo )) {
+    require_once( dirname( __FILE__ ) . '/redux-framework/sample/sample-config.php' );
+}
+
 /**
  * Excerpt code
  */
-function wpdocs_custom_excerpt_length( $length ) {
-    return 100;
+
+global $redux_demo;
+Redux::init('redux_demo'); 
+$florence_excerpt = $redux_demo['opt-image-select-layout'];
+
+if( $florence_excerpt == '1'){
+	function wpdocs_custom_excerpt_length( $length ) {
+    	return 100;
+	}
+	add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+	function wpdocs_excerpt_more( $more ) {
+	    if ( ! is_single() ) {
+	        $more = sprintf( '<p class="button"><a class="read-more" href="%1$s">%2$s</a></p>',
+	            get_permalink( get_the_ID() ),
+	            __( 'Continue Reading', 'textdomain' )
+	        );
+	    }
+	 
+	    return $more;
+	}
+	add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 }
-add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
-function wpdocs_excerpt_more( $more ) {
-    if ( ! is_single() ) {
-        $more = sprintf( '<p class="button"><a class="read-more" href="%1$s">%2$s</a></p>',
-            get_permalink( get_the_ID() ),
-            __( 'Continue Reading', 'textdomain' )
-        );
-    }
- 
-    return $more;
+
+else {
+	function wpdocs_custom_excerpt_length( $length ) {
+    	return 30;
+	}
+	add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 99 );
 }
-add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
 
 
  //Register tag cloud filter callback
@@ -224,9 +247,5 @@ if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.ph
 }
 
 
-if ( !class_exists( 'ReduxFramework' )) {
-    require_once( dirname( __FILE__ ) . '/redux-framework/ReduxCore/framework.php' );
-}
-if ( !isset( $redux_demo )) {
-    require_once( dirname( __FILE__ ) . '/redux-framework/sample/sample-config.php' );
-}
+
+

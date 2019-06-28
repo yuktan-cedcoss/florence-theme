@@ -26,7 +26,11 @@
     -webkit-box-shadow: 0 5px 4px -4px rgba(190,190,190,.1);
     -moz-box-shadow: 0 5px 4px -4px rgba(190,190,190,.1);
     box-shadow: 0 5px 4px -4px rgba(190,190,190,.1);
-
+	.post-thumbnail{
+		img{
+			width:100%;
+		}
+	}
 	.entry-header {
 	    padding: 20px 30px 24px;
 	    text-align: center;
@@ -205,3 +209,28 @@
 
 /*=====  End of SINGLE PAGE  ======*/
 
+/*==========================================
+=            CONTENT RIGHT PAGE            =
+==========================================*/
+
+.post-outer {
+    width: 100%;
+    display: inline-block;
+    .post-inner-img{
+    	display: inline-block;
+	    width: 37%;
+	    vertical-align: top;
+    }
+    .post-inner-text{
+    	display: inline-block;
+	    width: 62%;
+	    vertical-align: top;
+    }
+    .entry-header{
+    	text-align: left !important;
+    	padding-bottom: 10px !important;
+    }
+
+}
+
+/*=====  End of CONTENT RIGHT PAGE  ======*/

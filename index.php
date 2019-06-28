@@ -53,7 +53,19 @@ get_header();
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+					global $redux_demo; 
+					$florence_content_image_select_layout = $redux_demo['opt-image-select-layout'];
+
+					if( $florence_content_image_select_layout == '1'){
+						get_template_part( 'template-parts/content', get_post_type() );
+					}
+
+					elseif( $florence_content_image_select_layout == '2'){
+						get_template_part( 'template-parts/content-right', get_post_type() );
+					}
+					else{
+						get_template_part( 'template-parts/content-left', get_post_type() );
+					}
 
 			endwhile;
 

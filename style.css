@@ -930,6 +930,9 @@ a:hover, a:active {
   -moz-box-shadow: 0 5px 4px -4px rgba(190, 190, 190, 0.1);
   box-shadow: 0 5px 4px -4px rgba(190, 190, 190, 0.1);
 }
+.post .post-thumbnail img {
+  width: 100%;
+}
 .post .entry-header {
   padding: 20px 30px 24px;
   text-align: center;
@@ -1082,6 +1085,29 @@ a:hover, a:active {
 }
 
 /*=====  End of SINGLE PAGE  ======*/
+/*==========================================
+=            CONTENT RIGHT PAGE            =
+==========================================*/
+.post-outer {
+  width: 100%;
+  display: inline-block;
+}
+.post-outer .post-inner-img {
+  display: inline-block;
+  width: 37%;
+  vertical-align: top;
+}
+.post-outer .post-inner-text {
+  display: inline-block;
+  width: 62%;
+  vertical-align: top;
+}
+.post-outer .entry-header {
+  text-align: left !important;
+  padding-bottom: 10px !important;
+}
+
+/*=====  End of CONTENT RIGHT PAGE  ======*/
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
